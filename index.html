@@ -208,3 +208,477 @@ footer a{color:var(--G3);text-decoration:none}
 <body>
 
 <nav>
+  </div>
+</section>
+
+<section class="aboutSec" id="about">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="chip">The Author</span>
+      <h2 class="sh2">About Elymas</h2>
+      <div class="sbar"></div>
+    </div>
+
+    <div class="aboutGrid">
+      <div class="imgCol rv">
+        <div class="gf"></div>
+        <img src="https://i.ibb.co/9Hk0XQW/elymas.jpg" alt="Elymas"/>
+      </div>
+
+      <div class="txtCol rv d1">
+        <div class="aname">Elymas</div>
+        <div class="atag">Author · Graphic Designer · Visionary</div>
+
+        <p>I am Elymas, a young Ghanaian author and creative who believes that every person carries a God-given purpose waiting to be discovered, developed and lived.</p>
+        <p>Through my books, designs and digital work, I seek to inspire young people to grow in faith, pursue excellence and become the best version of themselves.</p>
+
+        <div class="eduLabel">Educational Background</div>
+
+        <div class="eduTimeline">
+          <div class="eduItem">
+            <div class="eduDot"></div>
+            <div class="eduCard">
+              <div class="eduTop">
+                <div class="eduIco">🎓</div>
+                <div>
+                  <div class="edlvl">Basic Education</div>
+                  <div class="edsch">Life Educational Complex</div>
+                </div>
+              </div>
+              <div class="eduFoot">
+                <span class="edyr">2022</span>
+                <span class="edstatus">Completed BECE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="eduItem">
+            <div class="eduDot"></div>
+            <div class="eduCard">
+              <div class="eduTop">
+                <div class="eduIco">🏫</div>
+                <div>
+                  <div class="edlvl">Senior High School</div>
+                  <div class="edsch">Okomfo Anokye Senior High School</div>
+                </div>
+              </div>
+              <div class="eduFoot">
+                <span class="edyr">2025</span>
+                <span class="edstatus">General Science · WASSCE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="eduItem">
+            <div class="eduDot"></div>
+            <div class="eduCard">
+              <div class="eduTop">
+                <div class="eduIco">📖</div>
+                <div>
+                  <div class="edlvl">Higher Education</div>
+                  <div class="edsch">Pursuing a future in Health &amp; Pharmacy</div>
+                </div>
+              </div>
+              <div class="eduFoot">
+                <span class="edyr">2026</span>
+                <span class="edstatus">Doctor of Pharmacy Aspirant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booksSec" id="books">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="chip">My Books</span>
+      <h2 class="sh2">Words That Transform</h2>
+      <div class="sbar"></div>
+      <p class="ssub">Books written to strengthen faith, awaken purpose and inspire excellence.</p>
+    </div>
+
+    <div class="booksGrid">
+
+      <div class="bkCard rv">
+        <div class="bkHot">🔥 Bestseller</div>
+        <div class="bkImg">
+          <img src="https://i.ibb.co/XZVh8Gv/saved-by-grace.jpg" alt="Saved By Grace"/>
+        </div>
+        <div class="bkBody">
+          <div class="bkTitle">Saved By Grace</div>
+          <div class="bkPrice">GH₵30.00</div>
+          <div class="bkDesc">A powerful reminder of the amazing grace of God and the transformation that comes when we fully embrace His love.</div>
+          <a href="https://wa.me/233536782743?text=Hello%20Elymas,%20I%20want%20to%20order%20Saved%20By%20Grace." class="bkBtn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="bkCard rv d1">
+        <div class="bkHot">⭐ Recommended</div>
+        <div class="bkImg">
+          <img src="https://i.ibb.co/5cL7J3D/when-purpose-meets-excellence.jpg" alt="When Purpose Meets Excellence"/>
+        </div>
+        <div class="bkBody">
+          <div class="bkTitle">When Purpose Meets Excellence</div>
+          <div class="bkPrice">GH₵40.00</div>
+          <div class="bkDesc">Discover how purpose and excellence can work together to produce a life that makes a meaningful impact.</div>
+          <a href="https://wa.me/233536782743?text=Hello%20Elymas,%20I%20want%20to%20order%20When%20Purpose%20Meets%20Excellence." class="bkBtn">Order Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="vBanner">
+  <div class="vSp"></div>
+  <div class="vEye">A Word for Your Journey</div>
+  <div class="vQ">“For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future.”</div>
+  <div class="vR">— Jeremiah 29:11</div>
+</section>
+
+<section class="bibleSec" id="bible">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="chip">Daily Word</span>
+      <h2 class="sh2">Read the Bible</h2>
+      <div class="sbar"></div>
+      <p class="ssub">Choose a book and chapter to read Scripture.</p>
+    </div>
+
+    <div class="bibleBox rv">
+      <div class="bRow">
+        <select class="bSel" id="bBook">
+          <option value="John">John</option>
+          <option value="Genesis">Genesis</option>
+          <option value="Psalms">Psalms</option>
+          <option value="Proverbs">Proverbs</option>
+          <option value="Matthew">Matthew</option>
+          <option value="Romans">Romans</option>
+        </select>
+        <input class="bNum" id="bChapter" type="number" value="1" min="1" max="150"/>
+        <button class="btnG" onclick="loadBible()">Read</button>
+      </div>
+
+      <div class="bOut" id="bOut">
+        <span class="bh">Select a book and chapter, then click Read.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quizSec" id="quiz">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="chip">Test Your Knowledge</span>
+      <h2 class="sh2">Bible Quiz</h2>
+      <div class="sbar"></div>
+      <p class="ssub">Challenge yourself with questions from Scripture.</p>
+    </div>
+
+    <div class="qCard rv">
+      <div class="qTop">
+        <div class="qLbl" id="qLbl">Question 1 of 5</div>
+        <div class="qSc" id="qSc">Score: 0</div>
+      </div>
+
+      <div class="qPr">
+        <div class="qBr" id="qBr" style="width:20%"></div>
+      </div>
+
+      <div class="qQ" id="qQ"></div>
+      <div class="qOs" id="qOs"></div>
+      <div class="qFb" id="qFb"></div>
+      <button class="btnG" id="qNext" onclick="nextQ()" style="display:none">Next Question</button>
+    </div>
+  </div>
+</section>
+
+<section class="aiSec" id="ai">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="chip">Your Faith Companion</span>
+      <h2 class="sh2">Elymas AI Assistant</h2>
+      <div class="sbar"></div>
+      <p class="ssub">Ask questions about faith, Scripture, purpose or my books.</p>
+    </div>
+
+    <div class="chatBox rv">
+      <div class="chHdr">
+        <div class="chDot"></div>
+        <div>
+          <div class="chNm">Elymas AI Assistant</div>
+          <div class="chSb">Online · Ready to help</div>
+        </div>
+      </div>
+
+      <div class="chMs" id="chMs">
+        <div class="msg mAI">🙏 Hello! I'm Elymas AI Assistant. I can help you with Bible verses, faith questions, purpose, or information about Elymas's books. What would you like to know?</div>
+      </div>
+
+      <div class="chIR">
+        <input class="chIn" id="chIn" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')sendChat()"/>
+        <button class="chSn" onclick="sendChat()">➤</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contactSec" id="contact">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="chip">Let's Connect</span>
+      <h2 class="sh2">Contact Elymas</h2>
+      <div class="sbar"></div>
+      <p class="ssub">Have a question, want a book, or simply want to connect? Reach out.</p>
+    </div>
+
+    <div class="ctGrid rv">
+      <a href="https://wa.me/233536782743" class="ctCard">
+        <div class="ctIco">💬</div>
+        <div class="ctRole">WhatsApp</div>
+        <div class="ctNm">Elymas</div>
+        <div class="ctWa">Message Me</div>
+      </a>
+
+      <a href="mailto:elymasdigitalhub@gmail.com" class="ctCard">
+        <div class="ctIco">✉️</div>
+        <div class="ctRole">Email</div>
+        <div class="ctNm">Elymas Digital Hub</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftB">ELYMAS DIGITAL HUB</div>
+  <p>Faith · Books · Purpose · AI</p>
+  <p>© 2026 Elymas Digital Hub. All rights reserved.</p>
+</footer>
+
+<a class="waBtn" href="https://wa.me/233536782743" aria-label="WhatsApp">💬</a>
+
+<script>
+const html=document.documentElement;
+const themeBtn=document.getElementById('themeBtn');
+
+if(themeBtn){
+  themeBtn.onclick=()=>{
+    const isDark=html.getAttribute('data-theme')==='dark';
+    html.setAttribute('data-theme',isDark?'light':'dark');
+    themeBtn.textContent=isDark?'☾':'☀';
+  };
+}
+
+const revs=document.querySelectorAll('.rv');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('on');
+  });
+},{threshold:.1});
+
+revs.forEach(r=>observer.observe(r));
+
+const bibleData={
+  John:{
+    1:'In the beginning was the Word, and the Word was with God, and the Word was God.',
+    3:'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.',
+    14:'And the Word was made flesh, and dwelt among us, and we beheld his glory, the glory as of the only begotten of the Father, full of grace and truth.'
+  },
+  Genesis:{
+    1:'In the beginning God created the heaven and the earth.',
+    2:'And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.'
+  },
+  Psalms:{
+    23:'The Lord is my shepherd; I shall not want.',
+    27:'The Lord is my light and my salvation; whom shall I fear?'
+  },
+  Proverbs:{
+    3:'Trust in the Lord with all thine heart; and lean not unto thine own understanding.',
+    16:'Commit thy works unto the Lord, and thy thoughts shall be established.'
+  },
+  Matthew:{
+    5:'Blessed are the poor in spirit: for theirs is the kingdom of heaven.',
+    6:'But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.'
+  },
+  Romans:{
+    8:'There is therefore now no condemnation to them which are in Christ Jesus.'
+  }
+};
+
+function loadBible(){
+  const book=document.getElementById('bBook').value;
+  const chapter=document.getElementById('bChapter').value;
+  const out=document.getElementById('bOut');
+  const verse=bibleData[book]&&bibleData[book][chapter];
+
+  if(verse){
+    out.innerHTML='<span class="vn">'+book+' '+chapter+'</span>'+verse;
+  }else{
+    out.innerHTML='<span class="bh">This chapter is not available in the current selection. Try another chapter.</span>';
+  }
+}
+
+const questions=[
+  {
+    q:'Who built the ark?',
+    o:['Moses','Noah','Abraham','David'],
+    a:1
+  },
+  {
+    q:'How many disciples did Jesus have?',
+    o:['10','11','12','13'],
+    a:2
+  },
+  {
+    q:'Who defeated Goliath?',
+    o:['David','Saul','Samuel','Jonathan'],
+    a:0
+  },
+  {
+    q:'What is the shortest verse in the Bible?',
+    o:['Jesus wept.','God is love.','Pray continually.','Rejoice always.'],
+    a:0
+  },
+  {
+    q:'Who was swallowed by a great fish?',
+    o:['Peter','Jonah','Paul','Elijah'],
+    a:1
+  }
+];
+
+let qIndex=0;
+let score=0;
+let answered=false;
+
+function renderQ(){
+  const q=questions[qIndex];
+  document.getElementById('qLbl').textContent='Question '+(qIndex+1)+' of '+questions.length;
+  document.getElementById('qSc').textContent='Score: '+score;
+  document.getElementById('qBr').style.width=((qIndex+1)/questions.length*100)+'%';
+  document.getElementById('qQ').textContent=q.q;
+
+  const os=document.getElementById('qOs');
+  os.innerHTML='';
+
+  q.o.forEach((opt,i)=>{
+    const b=document.createElement('button');
+    b.className='qO';
+    b.textContent=opt;
+    b.onclick=()=>answerQ(i);
+    os.appendChild(b);
+  });
+
+  document.getElementById('qFb').textContent='';
+  document.getElementById('qNext').style.display='none';
+  answered=false;
+}
+
+function answerQ(i){
+  if(answered)return;
+  answered=true;
+
+  const q=questions[qIndex];
+  const buttons=document.querySelectorAll('.qO');
+
+  buttons.forEach((b,index)=>{
+    b.disabled=true;
+    if(index===q.a)b.classList.add('correct');
+  });
+
+  if(i===q.a){
+    score++;
+    document.getElementById('qFb').textContent='Correct! Well done.';
+  }else{
+    buttons[i].classList.add('wrong');
+    document.getElementById('qFb').textContent='Not quite. Keep learning!';
+  }
+
+  document.getElementById('qSc').textContent='Score: '+score;
+  document.getElementById('qNext').style.display='inline-block';
+}
+
+function nextQ(){
+  if(qIndex<questions.length-1){
+    qIndex++;
+    renderQ();
+  }else{
+    document.getElementById('qLbl').textContent='Quiz Complete';
+    document.getElementById('qQ').textContent='You scored '+score+' out of '+questions.length+'.';
+    document.getElementById('qOs').innerHTML='';
+    document.getElementById('qFb').textContent='Thank you for taking the Bible Quiz!';
+    document.getElementById('qNext').textContent='Restart Quiz';
+    document.getElementById('qNext').onclick=()=>{
+      qIndex=0;
+      score=0;
+      document.getElementById('qNext').textContent='Next Question';
+      document.getElementById('qNext').onclick=nextQ;
+      renderQ();
+    };
+  }
+}
+
+renderQ();
+
+function sendChat(){
+  const input=document.getElementById('chIn');
+  const text=input.value.trim();
+  if(!text)return;
+
+  const messages=document.getElementById('chMs');
+
+  const user=document.createElement('div');
+  user.className='msg mUs';
+  user.textContent=text;
+  messages.appendChild(user);
+
+  input.value='';
+  messages.scrollTop=messages.scrollHeight;
+
+  const typing=document.createElement('div');
+  typing.className='msg mTy';
+  typing.textContent='Typing...';
+  messages.appendChild(typing);
+  messages.scrollTop=messages.scrollHeight;
+
+  setTimeout(()=>{
+    typing.remove();
+
+    const ai=document.createElement('div');
+    ai.className='msg mAI';
+    ai.textContent=getAIResponse(text);
+    messages.appendChild(ai);
+    messages.scrollTop=messages.scrollHeight;
+  },700);
+}
+
+function getAIResponse(text){
+  const t=text.toLowerCase();
+
+  if(t.includes('hello')||t.includes('hi')||t.includes('hey')){
+    return '🙏 Hello! It is wonderful to hear from you. How can I help you today?';
+  }
+
+  if(t.includes('book')||t.includes('saved by grace')||t.includes('purpose meets excellence')){
+    return '📚 Elymas has books including “Saved By Grace” and “When Purpose Meets Excellence.” You can find them in the Books section above and order directly through WhatsApp.';
+  }
+
+  if(t.includes('bible')||t.includes('verse')||t.includes('scripture')){
+    return '📖 Absolutely! You can use the Read the Bible section above to explore selected Bible passages. You can also ask me about faith or a specific Scripture.';
+  }
+
+  if(t.includes('purpose')){
+    return '✨ Purpose is not simply about what you do; it is about living intentionally and using what God has placed in you to make a meaningful difference.';
+  }
+
+  if(t.includes('god')||t.includes('jesus')||t.includes('christ')){
+    return '✝️ God loves you deeply. Through Jesus Christ, we receive grace, hope and the opportunity to live a transformed life.';
+  }
+
+  return '🙏 Thank you for your message! I can help with our free books, Bible verses, or faith questions. What would you like to know? God bless you! ✝';
+}
+</script>
+</body>
+</html>
