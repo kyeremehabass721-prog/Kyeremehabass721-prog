@@ -493,7 +493,7 @@ function listenVerse(){
   if(!currentVerseText||!('speechSynthesis' in window))return;
   window.speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(currentVerseText);
-  u.rate=0.11;
+  u.rate=0.99;
   u.pitch=0.7;
   u.onend=()=>{document.getElementById('stopBtn').style.display='none';};
   window.speechSynthesis.speak(u);
