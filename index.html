@@ -352,12 +352,10 @@ footer a{color:var(--G3);text-decoration:none}
         </select>
         <input class="bNum" type="number" id="ch" value="1" min="1" placeholder="Ch"/>
         <button class="btnG" onclick="loadBible()">Read ✦</button>
+        <button class="btnGh" id="listenBtn" onclick="listenVerse()" style="display:none">🔊 Listen</button>
+        <button class="btnGh" id="stopBtn" onclick="stopVerse()" style="display:none">⏹ Stop</button>
       </div>
       <div class="bOut" id="bOut"><span class="bh">✦ Select a book and chapter, then press Read…</span></div>
-    <div class="bRow" style="margin-top:1rem;margin-bottom:0">
-  <button class="btnGh" id="listenBtn" onclick="listenVerse()" style="display:none">🔊 Listen to this Chapter</button>
-  <button class="btnGh" id="stopBtn" onclick="stopVerse()" style="display:none">⏹ Stop</button>
-</div>
     </div>
   </div>
 </section>
