@@ -495,8 +495,8 @@ function listenVerse(){
   if(!currentVerseText||!('speechSynthesis' in window))return;
   window.speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(currentVerseText);
-  u.rate=0.1;
-  u.pitch=1;
+  u.rate=0.15;
+  u.pitch=0.8;
   u.onend=()=>{document.getElementById('stopBtn').style.display='none';};
   window.speechSynthesis.speak(u);
   document.getElementById('stopBtn').style.display='inline-block';
