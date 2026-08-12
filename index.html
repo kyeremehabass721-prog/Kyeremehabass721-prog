@@ -639,16 +639,16 @@ async function sendMsg() {
       })
     });
     tm.remove();
-    if (res.ok) {
-      var data = await res.json();
-      var reply = data.reply || getLocalReply(txt);
-      chatHistory.push({ role: 'assistant', content: reply });
-      addMsg('mAI', reply);
+    var data = await res.json();
+    if (data.reply) {
+      chatHistory.push({ role: 'assistant', content: data.reply });
+      addMsg('mAI', data.reply);
     } else {
-      fallback(tm, txt);
+      addMsg('mAI', '⚠️ DEBUG: ' + JSON.stringify(data));
     }
   } catch (e) {
-    fallback(tm, txt);
+    tm.remove();
+    addMsg('mAI', '⚠️ DEBUG EXCEPTION: ' + String(e));
   }
   inp.disabled = false;
   btn.disabled = false;
