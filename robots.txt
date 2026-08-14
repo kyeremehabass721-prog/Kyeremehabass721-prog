@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kyeremehabass721-prog.github.io/Kyeremehabass721-prog/sitemap.xml
