@@ -1,7 +1,12 @@
-// Minimal service worker — required by Chrome for the "Install app" prompt to appear.
-// Caches the core page so it also loads instantly on repeat visits.
+// Elymas Digital Hub — service worker
+// Strategy: always try the network first for the page itself, so the installed
+// app picks up new features immediately. Falls back to the saved copy only
+// when there's no internet connection. Static assets (icons, manifest) are
+// cached for speed but still refreshed in the background on every visit.
 
-const CACHE_NAME = 'elymas-hub-v1';
+// IMPORTANT: bump this version number every time index.html changes,
+// so old installed copies get replaced instead of stuck forever.
+const CACHE_NAME = 'elymas-hub-v3';
 const CORE_ASSETS = ['./index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (event) => {
@@ -21,7 +26,32 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Network-first for the page itself (HTML navigations) — always get the
+  // latest version when online; only use the saved copy if offline.
+  if (event.request.mode === 'navigate' || event.request.destination === 'document') {
+    event.respondWith(
+      fetch(event.request)
+        .then((res) => {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          return res;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html')))
+    );
+    return;
+  }
+
+  // Cache-first (with background refresh) for everything else — icons, manifest, etc.
   event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request).catch(() => cached))
+    caches.match(event.request).then((cached) => {
+      const fetchPromise = fetch(event.request)
+        .then((res) => {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          return res;
+        })
+        .catch(() => cached);
+      return cached || fetchPromise;
+    })
   );
 });
