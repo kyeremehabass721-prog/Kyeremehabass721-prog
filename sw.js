@@ -6,7 +6,7 @@
 
 // IMPORTANT: bump this version number every time index.html changes,
 // so old installed copies get replaced instead of stuck forever.
-const CACHE_NAME = 'elymas-hub-v6';
+const CACHE_NAME = 'elymas-hub-v7';
 const CORE_ASSETS = ['./index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (event) => {
